@@ -623,6 +623,9 @@
                   <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                   <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFood}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                   <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFoodN}" ExpressionTypeL="String" ExpressionR="${var:ReuseFoodLimit}" ExpressionTypeR="String" ConditionType="NumericLess" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFoodN}" ExpressionTypeL="String" ExpressionR="${var:ReuseFoodLimit}" ExpressionTypeR="String" ConditionType="NumericLess" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFoodLimit}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
                 <Conditions />
               </Action>
