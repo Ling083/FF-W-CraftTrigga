@@ -1,0 +1,1094 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder FFXIVJobFilterEnabled="True" FFXIVJobFilter="32640" Id="6798ea70-c757-4bcf-954b-3f5cd8e2317a" Name="Crafting (CSVlingV13)" Enabled="true">
+    <Folders>
+      <Folder Id="7bb95c75-7193-4c8f-af08-c379f1e1bf56" Name="Craft (activate 1 ONLY)" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Sequential="True" Name="Pot4Food4" Id="f0d240a2-496e-4c8d-baf5-f43a3485ebf8" RegularExpression="^.{15}00:[^:]+:REEEEE" Description="This should be the sequence of keypresses to confirm your recipe, and to activate your 1st crafting macro.">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" VariableOp="UnsetAll" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="CraftName" VariableExpression="${_triggername}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="87852920-d7b3-47e2-a4af-7ae3786cc8a5" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" LogLevel="-1" UseTTSTextExpression="${_triggername}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="12be8a17-cc26-471a-9762-f692ddf97022" Name="Main Loop" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Sequential="True" Name="2 close Menu" Id="73b0778c-5db6-436d-9a14-3c6eaa6b5b7f" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="72b35b4d-49a7-49c7-becb-e042ce201c30" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="3c reuse Syrup" Id="25bd832d-80df-42ac-bab3-503d21d3bd77" RegularExpression="" PrevActionsRefire="Deny">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="${var:SyrupHotbarKey}" KeyPressWindow="FINAL FANTASY XIV" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:Syrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:SyrupCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:ReuseSyrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" DiscordWebhookURL="${tvar:basic[2][13]}" DiscordWebhookMessage="&lt;@${tvar:basic[2][12]}&gt; lost syrup, and crafted ${var:ItemN} times ${var:ItemN2}." LogLevel="-1" UseTTSTextExpression="food finished ending craft ${var:ReuseFoodN} food used" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="DiscordWebhook">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:Syrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:SyrupCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:ReuseSyrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" UseTTSTextExpression="syrup finished ending craft" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:Syrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:SyrupCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:ReuseSyrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="72b35b4d-49a7-49c7-becb-e042ce201c30" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="5000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="1z quick Fire " Id="fea0a2ca-85f0-44cd-a9b4-fd3f76f4298e" RegularExpression="" PrevActionsRefire="Deny" Description="This should be the sequence of keypresses to confirm your recipe, and to activate your 1st crafting macro.">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
+                <Condition Enabled="false" Grouping="Not" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="${var:MacroKeybind1}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="3000">
+                <Condition Enabled="true" Grouping="Not">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="is now 0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Syrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:SyrupCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="HQ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:CP}" ExpressionTypeL="Numeric" ExpressionR="${var:RequiredCP}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:CP}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" UseTTSTextExpression="HQ" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="cc6ea76b-679e-488f-a91a-6ce3aea58ace" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="HQ" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="${var:MacroKeybind1}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="d72a22a4-f1d6-47c5-8f4f-815a4a5d077b" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="1000">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionGroup Enabled="true" Grouping="Xor">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:CP}" ExpressionTypeL="Numeric" ExpressionR="${var:RequiredCP}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:CP}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Syrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:SyrupCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="is now 0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="3d re-open menu" Id="4a7baaf8-ba59-42da-bc7b-dd9cf7cefb40" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="${var:DpadRightKey}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="${var:RepairMenu}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="${var:CraftMenu}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fea0a2ca-85f0-44cd-a9b4-fd3f76f4298e" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" LogLevel="-1" VariableOp="SetNumeric" VariableName="CheckN" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="6a Panic cancel craft" Id="d72a22a4-f1d6-47c5-8f4f-815a4a5d077b" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
+                <Condition Enabled="false" Grouping="Not">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Syrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:SyrupCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:CP}" ExpressionTypeL="Numeric" ExpressionR="${var:RequiredCP}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Not">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Syrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:SyrupCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:CP}" ExpressionTypeL="Numeric" ExpressionR="${var:RequiredCP}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Not">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Syrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:SyrupCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:CP}" ExpressionTypeL="Numeric" ExpressionR="${var:RequiredCP}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Not">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Syrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:SyrupCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:CP}" ExpressionTypeL="Numeric" ExpressionR="${var:RequiredCP}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="${var:SELECTbutton}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Not">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Syrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:SyrupCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:CP}" ExpressionTypeL="Numeric" ExpressionR="${var:RequiredCP}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="Not">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Syrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:SyrupCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:CP}" ExpressionTypeL="Numeric" ExpressionR="${var:RequiredCP}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="73b0778c-5db6-436d-9a14-3c6eaa6b5b7f" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="2500">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="1b Continue crafting to macro 2" Id="1c6063e1-7b94-465a-9f84-3448ae707464" RegularExpression="^.{15}00:[^:]+:Macro #1 finished" Description="This should be the keypress to activate your 2nd crafting macro.">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="${var:MacroKeybind2}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Name="1c Continue crafting to macro 3" Id="47aebf03-a4c4-4aa1-905b-1acd42a3819f" RegularExpression="^.{15}00:[^:]+:Macro #2 finished" Description="This should be the keypress to activate your 2nd crafting macro.">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="${var:MacroKeybind3}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="3 CHECK LOOP" Id="72b35b4d-49a7-49c7-becb-e042ce201c30" RegularExpression="" PrevActionsRefire="Deny">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="Check Loop" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3a601d33-95c1-4de7-9815-c666726bd4e8" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="is now 0)" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="has dropped to 10" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="d9e7b8a3-a0ec-4a15-a033-750d192d4c75" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="has dropped to 10" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="is now 0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="25bd832d-80df-42ac-bab3-503d21d3bd77" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Syrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:SyrupCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionGroup Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </ConditionGroup>
+                    <ConditionGroup Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </ConditionGroup>
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="is now 0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="has dropped to 10" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" DiscordWebhookURL="${tvar:basic[2][13]}" DiscordWebhookMessage="${var:MatInvCheck2}. &lt;@${tvar:basic[2][12]}&gt; reused Food ${var:ReuseFoodN} times, and crafted ${var:ItemN} times ${var:ItemN2}." LogLevel="-1" UseTTSTextExpression="Inventory failed" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="DiscordWebhook">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" DiscordWebhookURL="https://discord.com/api/webhooks/791763861341470740/nL9xX7QEVdg1eF7Y6hACyZVbhaQf0xQxyQr4spi5KKnKVkq5Ln25_gfAz5j00AmEKsWF" DiscordWebhookMessage="${var:MatInvCheck2}. I think &lt;@244384166878248961&gt; crafted ${var:ItemN} times ${var:ItemN2}." LogLevel="-1" UseTTSTextExpression="Inventory failed" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="898278d6-cf63-4c36-8fe8-8a04d8f8d5ed" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="4a7baaf8-ba59-42da-bc7b-dd9cf7cefb40" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Not">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:Syrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:SyrupCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="has dropped to 10" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="is now 0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:CP}" ExpressionTypeL="Numeric" ExpressionR="${var:RequiredCP}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:CP}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" LogLevel="-1" VariableOp="SetNumeric" VariableName="CheckN" VariableExpression="${var:CheckN}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" DiscordWebhookURL="${tvar:basic[2][13]}" DiscordWebhookMessage="Unknown CP fail. &lt;@${tvar:basic[2][12]}&gt; reused Food ${var:ReuseFoodN} times, and crafted ${var:ItemN} times ${var:ItemN2}." LogLevel="-1" UseTTSTextExpression="Inventory failed" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="DiscordWebhook">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionGroup Enabled="true" Grouping="And">
+                    <ConditionGroup Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:CP}" ExpressionTypeL="Numeric" ExpressionR="${var:RequiredCP}" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:CP}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </ConditionGroup>
+                    <ConditionGroup Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:Syrup}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:SyrupCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </ConditionGroup>
+                    <ConditionGroup Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </ConditionGroup>
+                    <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="has dropped to 10" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="is now 0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                  </ConditionGroup>
+                  <ConditionSingle Enabled="true" ExpressionL="${var:CheckN}" ExpressionTypeL="Numeric" ExpressionR="10" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${var:CheckN}" ExpressionTypeL="Numeric" ExpressionR="11" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="3a repair" Id="3a601d33-95c1-4de7-9815-c666726bd4e8" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="Rfail" VariableExpression="${var:Rfail}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="200">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="${var:RepairMenu}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="500">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="${var:DpadRightKey}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="700">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="700">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="${var:DpadRightKey}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="700">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="700">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="And" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1a7eae09-316a-4dd5-8f78-8900a1044840" TriggerText="items? repaired." TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="5000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="9 Unable to Craft" Id="1da2b513-879d-4fb7-a38a-f8f9ec170317" RegularExpression="^.{15}00:[^:]+:Unable to craft\. (?&lt;Unable2&gt;[^.]*?)\." PrevActionsRefire="Deny" PeriodRefire="Deny">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="MatInvCheck" VariableExpression="HQ" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${Unable2}" ExpressionTypeL="String" ExpressionR="You have not selected all of the materials" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="MatInvCheck" VariableExpression="Fail" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Not">
+                  <ConditionSingle Enabled="true" ExpressionL="${Unable2}" ExpressionTypeL="String" ExpressionR="You have not selected all of the materials" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" VariableOp="SetString" VariableName="MatInvCheck2" VariableExpression="${Unable2}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="9 Lost/Gain Food/Syrup" Id="71d0982d-b7cf-41a2-8770-5d3744b60df5" RegularExpression="^.{15}00:[^:]+:(. )?You (?&lt;FoodEffect&gt;gain|lose) the effect of (?&lt;FoodEffect2&gt;Well Fed|Medicated)">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="FoodCheck" VariableExpression="${FoodEffect}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${FoodEffect2}" ExpressionTypeL="String" ExpressionR="Well Fed" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="SyrupCheck" VariableExpression="${FoodEffect}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${FoodEffect2}" ExpressionTypeL="String" ExpressionR="Medicated" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" UseTTSTextExpression="${FoodEffect} ${FoodEffect2}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="9 Durability 00:0839" Id="eed381da-c731-4cc1-8be5-dbea48c80e14" RegularExpression="^.{15}00:[^:]+:The condition of your(?&lt;GearName&gt;.*) (?&lt;Durability&gt;has dropped to 10|is now 0)">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="GearCheck" VariableExpression="${Durability}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="is now 0" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" UseTTSTextExpression="${GearName} ${Durability} percent" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" Asynchronous="False">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="is now 0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="9 CP check trigger auto" Id="c9a2ae8a-dba6-4017-9930-2201540573c3" RegularExpression="^.{15}26:(?&lt;Capid&gt;[^:]{8}):[^:]*:[^:]{8}:[^:]*:[^:]*:(?&lt;CP&gt;\d+):\k&lt;CP&gt;">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="CP" VariableExpression="${CP}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${CP}" ExpressionTypeL="Numeric" ExpressionR="10000" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${CP}" ExpressionTypeL="Numeric" ExpressionR="${var:CP}" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${Capid}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[${_ffxivplayer}].id}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="And" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="3b reuse food" Id="d9e7b8a3-a0ec-4a15-a033-750d192d4c75" RegularExpression="" PrevActionsRefire="Deny">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="ReuseFoodN" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFoodN}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="${var:FoodHotbarKey}" KeyPressWindow="FINAL FANTASY XIV" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFood}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFoodN}" ExpressionTypeL="String" ExpressionR="${var:ReuseFoodLimit}" ExpressionTypeR="String" ConditionType="NumericLess" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFoodLimit}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" UseTTSTextExpression="food finished ending craft ${var:ReuseFoodN} food re-used" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFoodN}" ExpressionTypeL="String" ExpressionR="${var:ReuseFoodLimit}" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFood}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" DiscordWebhookURL="${tvar:basic[2][13]}" DiscordWebhookMessage="&lt;@${tvar:basic[2][12]}&gt; reused Food ${var:ReuseFoodN} times, and crafted ${var:ItemN} times ${var:ItemN2}." LogLevel="-1" UseTTSTextExpression="food finished ending craft ${var:ReuseFoodN} food used" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="DiscordWebhook">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFoodN}" ExpressionTypeL="String" ExpressionR="${var:ReuseFoodLimit}" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFood}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" LogLevel="-1" UseTTSTextExpression="food finished ending craft" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="898278d6-cf63-4c36-8fe8-8a04d8f8d5ed" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:Food}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:FoodCheck}" ExpressionTypeL="String" ExpressionR="lose" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFoodN}" ExpressionTypeL="String" ExpressionR="${var:ReuseFoodLimit}" ExpressionTypeR="String" ConditionType="NumericGreaterEqual" />
+                    <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFood}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="72b35b4d-49a7-49c7-becb-e042ce201c30" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="5000">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:ReuseFoodN}" ExpressionTypeL="String" ExpressionR="${var:ReuseFoodLimit}" ExpressionTypeR="String" ConditionType="NumericLessEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" LogLevel="-1" VariableOp="SetNumeric" VariableName="ReuseFoodN" VariableExpression="${var:ReuseFoodN}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="0b" Id="4fb07e30-3fb5-4444-b921-bd9473c8a0c8" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="393319b0-68cf-4ccc-a877-4dba65007998" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="ConfirmKeyX" VariableExpression="${tvarrl:basic[ConfirmKeyX][2]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" VariableOp="SetString" VariableName="CancelKeyO" VariableExpression="${tvarrl:basic[CancelKeyO][2]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" LogLevel="-1" VariableOp="SetString" VariableName="DpadRightKey" VariableExpression="${tvarrl:basic[DpadRightKey][2]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" LogLevel="-1" VariableOp="SetString" VariableName="DpadUpKey" VariableExpression="${tvarrl:basic[DpadUpKey][2]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" LogLevel="-1" VariableOp="SetString" VariableName="SELECTbutton" VariableExpression="${tvarrl:basic[SELECTbutton][2]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" LogLevel="-1" VariableOp="SetString" VariableName="RepairMenu" VariableExpression="${tvarrl:basic[RepairMenu][2]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" LogLevel="-1" VariableOp="SetString" VariableName="CraftMenu" VariableExpression="${tvarrl:basic[CraftMenu][2]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" LogLevel="-1" VariableOp="SetString" VariableName="FoodHotbarKey" VariableExpression="${tvarrl:basic[FoodHotbarKey][2]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" LogLevel="-1" VariableOp="SetString" VariableName="SyrupHotbarKey" VariableExpression="${tvarrl:basic[SyrupHotbarKey][2]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b5281171-475d-4aad-9eca-e5ad76c006aa" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="8 Shutdown" Id="898278d6-cf63-4c36-8fe8-8a04d8f8d5ed" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="83" KeyPressWindow="Command Prompt" LaunchProcessPathExpression="C:\Windows\System32\shutdown.exe" LaunchProcessCmdlineExpression="/s" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LaunchProcess">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" DiscordWebhookURL="${tvar:basic[2][13]}" DiscordWebhookMessage="&lt;@${tvar:basic[2][12]}&gt; Shutdown" DiscordTts="True" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="DiscordWebhook">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:ShutDown}" ExpressionTypeL="String" ExpressionR="Yes" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="4 HQ selection" Id="cc6ea76b-679e-488f-a91a-6ce3aea58ace" RegularExpression="" RefirePeriodExpression="4000">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="MatInvCheck" VariableExpression="select" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="${var:DpadUpKey}" KeyPressWindow="FINAL FANTASY XIV" UseTTSTextExpression="HQ selection" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="${var:DpadUpKey}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="150">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="${var:DpadRightKey}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="150">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" KeypressType="WindowMessage" KeyPressCode="${var:DpadRightKey}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="150">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Placeholder">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" KeypressType="WindowMessage" KeyPressCode="${var:DpadUpKey}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Placeholder">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="13" KeypressType="WindowMessage" KeyPressCode="${var:DpadUpKey}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="14" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Placeholder">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="15" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="16" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="17" KeypressType="WindowMessage" KeyPressCode="${var:DpadUpKey}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="18" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Placeholder">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="19" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="20" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="21" KeypressType="WindowMessage" KeyPressCode="${var:DpadUpKey}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="22" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Placeholder">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="23" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="24" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="25" KeypressType="WindowMessage" KeyPressCode="${var:DpadUpKey}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="26" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Placeholder">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="27" KeypressType="WindowMessage" KeyPressCode="${var:CancelKeyO}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="100">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="28" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="29" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="30" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fea0a2ca-85f0-44cd-a9b4-fd3f76f4298e" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="4000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="1a MAINLOOP" Id="393319b0-68cf-4ccc-a877-4dba65007998" RegularExpression="^.{15}00:[^:]+:Craft finished" PrevActionsRefire="Deny" Description="This should be the sequence of keypresses to confirm your recipe, and to activate your 1st crafting macro.">
+            <Actions>
+              <Action OrderNumber="1" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="5200">
+                <Condition Enabled="false" Grouping="Not" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Not" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="KeyPress" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" KeypressType="WindowMessage" KeyPressCode="${var:ConfirmKeyX}" KeyPressWindow="FINAL FANTASY XIV" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="fea0a2ca-85f0-44cd-a9b4-fd3f76f4298e" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="9 Item track" Id="7eea3f0c-e408-4b8b-8168-1b1519c90a3c" RegularExpression="^.{15}00:[^:]*:?:You synthesize (?&lt;ItemN2&gt;[^:]*)\.">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="ItemN2" VariableExpression="${ItemN2}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="ItemN" VariableExpression="${var:ItemN} +1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="9 Repaired" Id="e4064c12-f879-4fe3-b75b-e7e74d3e8883" RegularExpression="^.{15}00:0839:[^ ]* items? repaired">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" UseTTSTextExpression="Repair Sucess" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="GearCheck" VariableExpression="Repaired" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" VariableOp="SetNumeric" VariableName="Rfail" VariableExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="9 [GM]GM" Id="564749e4-9e3a-4726-9e61-c66812b379d0" RegularExpression="(?&lt;GMchat&gt;^.{1}[^[]*\[GM\].*)">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetString" VariableName="MatInvCheck" VariableExpression="Fail" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" DiscordWebhookURL="${tvar:basic[2][13]}" DiscordWebhookMessage="${GMchat} &lt;@${tvar:basic[2][12]}&gt; reused Food ${var:ReuseFoodN} times, and crafted ${var:ItemN} times ${var:ItemN2}." LogLevel="-1" UseTTSTextExpression="Inventory failed" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="DiscordWebhook">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="3z" Id="1a7eae09-316a-4dd5-8f78-8900a1044840" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="72b35b4d-49a7-49c7-becb-e042ce201c30" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="true" Grouping="Not">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:Rfail}" ExpressionTypeL="Numeric" ExpressionR="10" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" UseTTSTextExpression="Repair failed ${var:Rfail}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="72b35b4d-49a7-49c7-becb-e042ce201c30" TriggerForce="regexp" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="has dropped to 10" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="is now 0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" DiscordWebhookURL="${tvar:basic[2][13]}" DiscordWebhookMessage="Unknown Error, Repair Failed ${var:Rfail} times. &lt;@${tvar:basic[2][12]}&gt; reused Food ${var:ReuseFoodN} times, and crafted ${var:ItemN} times ${var:ItemN2}." LogLevel="-1" UseTTSTextExpression="Unknown Error Repair failed" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="72b35b4d-49a7-49c7-becb-e042ce201c30" TriggerForce="regexp" ActionType="DiscordWebhook">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="has dropped to 10" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${var:GearCheck}" ExpressionTypeL="String" ExpressionR="is now 0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Name="9 Spirit bound" Id="21fba800-8381-40e1-a97e-b69149ac1001" RegularExpression="">
+            <Actions />
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="0c" Id="b5281171-475d-4aad-9eca-e5ad76c006aa" RegularExpression="" Description="This should be the sequence of keypresses to confirm your recipe, and to activate your 1st crafting macro.">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" VariableOp="SetNumeric" VariableName="k" VariableExpression="${tvarrl:crafts[${var:CraftName}][1]}+1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" VariableOp="SetNumeric" VariableName="RequiredCP" VariableExpression="${tvar:crafts[6][${var:k}]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" VariableOp="SetString" VariableName="Food" VariableExpression="${tvar:crafts[7][${var:k}]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" LogLevel="-1" VariableOp="SetString" VariableName="Syrup" VariableExpression="${tvar:crafts[8][${var:k}]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" LogLevel="-1" VariableOp="SetString" VariableName="C3rd" VariableExpression="${tvar:crafts[9][${var:k}]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" LogLevel="-1" VariableOp="SetString" VariableName="MacroKeybind1" VariableExpression="${tvar:crafts[3][${var:k}]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" LogLevel="-1" VariableOp="SetString" VariableName="MacroKeybind2" VariableExpression="${tvar:crafts[4][${var:k}]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" LogLevel="-1" VariableOp="SetString" VariableName="MacroKeybind3" VariableExpression="${tvar:crafts[5][${var:k}]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="0 Setting" Id="87852920-d7b3-47e2-a4af-7ae3786cc8a5" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="C:\Users\Clive\AppData\Roaming\Advanced Combat Tracker\Config\FF14craftriga - basic.csv" DiskFileOpVar="basic" ListVariableOp="Set" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="DiskFile">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="C:\Users\Clive\AppData\Roaming\Advanced Combat Tracker\Config\FF14craftriga - crafts.csv" DiskFileOpVar="crafts" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="DiskFile">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Placeholder">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="ReuseFoodLimit" VariableExpression="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" LogLevel="-1" VariableOp="SetString" VariableName="ReuseFood" VariableExpression="Yes" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" LogLevel="-1" VariableOp="SetString" VariableName="ReuseSyrup" VariableExpression="Yes" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" LogLevel="-1" VariableOp="SetString" VariableName="ShutDown" VariableExpression="ChangeThis2YesNo" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Placeholder">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="4fb07e30-3fb5-4444-b921-bd9473c8a0c8" TriggerForce="regexp" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="false" Sequential="True" Name="STOP Absolutely Everything" Id="2f04b707-6638-4ddc-bd83-120697099b6b" RegularExpression="^.{15}00:[^:]+:Stop The REEEEE">
+        <Actions>
+          <Action OrderNumber="1" LogLevel="-1" VariableOp="UnsetAll" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="id" VariableExpression="${_ffxivparty[1].id}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelAllTrigger" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="3" LogLevel="-1" UseTTSTextExpression="STOP Absolutely Everything" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="false" Name="asdasd" Id="e52bfee7-d0b0-49d8-aec3-3f1b9d902312" RegularExpression="">
+        <Actions>
+          <Action OrderNumber="1" DiscordWebhookURL="https://discord.com/api/webhooks/791763861341470740/nL9xX7QEVdg1eF7Y6hACyZVbhaQf0xQxyQr4spi5KKnKVkq5Ln25_gfAz5j00AmEKsWF" DiscordWebhookMessage="${var:MatInvCheck2}. I think &lt;@244384166878248961&gt; crafted ${var:ItemN} x ${var:ItemN2}." LogLevel="-1" UseTTSTextExpression="Inventory failed" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="DiscordWebhook">
+            <Condition Enabled="false" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:MatInvCheck}" ExpressionTypeL="String" ExpressionR="Fail" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" LogLevel="-1" VariableOp="SetString" VariableName="ShutDown" VariableExpression="Yes" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="3" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="C:\Users\Clive\AppData\Roaming\Advanced Combat Tracker\Config\FF14craftriga - basic.csv" DiskFileOpVar="basic" ListVariableOp="Set" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="DiskFile">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="4" LogLevel="-1" VariableOp="SetNumeric" VariableName="ReuseFoodLimit" VariableExpression="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="5" DiskFileOp="ReadCSVIntoTableVariable" DiskFileOpName="\FF14craftriga - basic.csv" DiskFileOpVar="basic" ListVariableOp="Set" LogLevel="-1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="DiskFile">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="6" LogLevel="-1" VariableOp="SetString" VariableName="GearCheck" VariableExpression="is now 0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="7" LogLevel="-1" VariableOp="SetString" VariableName="ReuseFood" VariableExpression="No" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="8" LogLevel="-1" UseTTSTextExpression="${tvarrl:basic[ConfirmKeyX][2]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
